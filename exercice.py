@@ -1,25 +1,41 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from matplotlib.colors import cnames
+#from matplotlib.colors import cnames
 
 
 def list_to_dict(some_list: list) -> dict:
     # TODO: Transformer la liste en dictionnaire, les éléments de la liste deviennent les clés et leur index deviennent les valeurs
-
-    return {}
+    dict = {}
+    for n in range(0,len(some_list)):
+        dict[some_list[n]] = n
+    return dict
 
 
 def color_name_to_hex(colors: list) -> list:
     # TODO: Trouver la valeur hex de chaque couleur dans la liste et créer une liste de tupple où le premier élément est le nom de la couleur et le deuxième est la valeur hex
+    list_conversion = []
+    list_hexa = []
+    list_fin = []
+    for n in range(0, len(colors)):
+        list_conversion.append(colors[n])
+        list_hexa.append(int(list_conversion[n], 35))
+        list_fin.append((colors[n],list_hexa[n]))
 
-    return []
+
+    return list_fin
 
 
 def create_list() -> list:
     # TODO: Créer une liste des 10 000 premiers entiers positif, sauf pour les entiers de 15 à 350
+    liste_entiers = []
+    for i in range(0,10000):
+        liste_entiers.append(i)
 
-    return []
+    for n in range(15,351):
+        liste_entiers.remove(n)
+
+    return liste_entiers
 
 
 def compute_mse(model_dict: dict) -> dict:
