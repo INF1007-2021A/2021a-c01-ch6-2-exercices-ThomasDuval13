@@ -1,0 +1,52 @@
+test_color_name_to_hex (__main__.TestExercice) ... FAIL
+test_compute_mse (__main__.TestExercice) ... FAIL
+test_create_list (__main__.TestExercice) ... ok
+test_list_to_dict (__main__.TestExercice) ... ok
+
+======================================================================
+FAIL: test_color_name_to_hex (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 36, in test_color_name_to_hex
+    self.assertEqual(
+AssertionError: Lists differ: [[('blue', 498414), ('red', 33578), ('green', 251852[147 chars]43)]] != [[('blue', '#0000FF'), ('red', '#FF0000'), ('green',[163 chars]A')]]
+
+First differing element 0:
+[('blue', 498414), ('red', 33578), ('green', 251852[65 chars]954)]
+[('blue', '#0000FF'), ('red', '#FF0000'), ('green',[74 chars]FF')]
+
+- [[('blue', 498414),
+-   ('red', 33578),
+-   ('green', 25185288),
+-   ('yellow', 1807679472),
+-   ('black', 17419940),
+-   ('white', 48771954)],
+-  [('orange', 1301499374),
+-   ('blue', 498414),
+-   ('red', 33578),
+-   ('brown', 17695043)]]
++ [[('blue', '#0000FF'),
++   ('red', '#FF0000'),
++   ('green', '#008000'),
++   ('yellow', '#FFFF00'),
++   ('black', '#000000'),
++   ('white', '#FFFFFF')],
++  [('orange', '#FFA500'),
++   ('blue', '#0000FF'),
++   ('red', '#FF0000'),
++   ('brown', '#A52A2A')]] : Mauvaise reponse
+
+======================================================================
+FAIL: test_compute_mse (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 62, in test_compute_mse
+    self.assertDictEqual(
+AssertionError: {} != {'LR': 220.6, 'DNN': 14.0, 'RF': 1681.8}
+- {}
++ {'DNN': 14.0, 'LR': 220.6, 'RF': 1681.8} : Erreur dans le calcul des MSE
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+FAILED (failures=2)
